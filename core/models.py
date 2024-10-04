@@ -218,12 +218,3 @@ class Payment(models.Model):
     def __str__(self):
         return f'Payment for Booking {self.booking.id} - {self.status}'
 
-from django.db import models
-
-class TimeBlock(models.Model):
-    # Define your fields here
-    start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
-
-    def __str__(self):
-        return f'{self.start_time} - {self.end_time}'
